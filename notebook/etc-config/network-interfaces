@@ -1,5 +1,7 @@
 auto lo
 iface lo inet loopback
+    up ip addr add 192.168.1.40/32 dev lo || true
+    down ip addr del 192.168.1.40/32 dev lo || true
 
 iface nic0 inet manual
 
