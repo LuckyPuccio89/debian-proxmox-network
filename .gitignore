@@ -1,6 +1,7 @@
 *
 !/README.md
-!/setup-rete.sh
+!/notebook/
+!/notebook/*
 !/.gitignore
 !/desktop5800x/
 !/desktop5800x/*

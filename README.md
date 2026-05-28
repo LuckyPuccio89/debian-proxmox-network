@@ -5,7 +5,10 @@ Configurazione di rete per Proxmox su Debian 13 (Trixie) con KDE.
 ## Struttura
 
 ```
-setup-rete.sh          Script principale configurazione rete
+notebook/              Setup notebook (questo PC)
+  └─ setup.sh          Configurazione rete
+desktop5800x/          Setup Desktop Ryzen 5800X
+  └─ setup.sh          Template configurabile
 lxc/                   Configurazioni container LXC
   └─ 100.conf          Container Grafica-3d (GPU pass-through)
 docker/                Docker compose stacks
@@ -13,7 +16,7 @@ docker/                Docker compose stacks
   └─ webtop-stack/     Webtop app stack (OrcaSlicer, FreeCAD)
 ```
 
-## Cosa fa setup-rete.sh
+## Cosa fa notebook/setup.sh
 
 - Proxmox (pveproxy/spiceproxy) bindato solo su IP LAN
 - Routing senza metrica (usa entrambe le interfacce)
