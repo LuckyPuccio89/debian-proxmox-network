@@ -1,0 +1,11 @@
+*
+!/README.md
+!/setup-rete.sh
+!/.gitignore
+!/desktop5800x/
+!/desktop5800x/*
+!/lxc/
+!/lxc/*
+!/docker/
+!/docker/*
+!/docker/**/*
