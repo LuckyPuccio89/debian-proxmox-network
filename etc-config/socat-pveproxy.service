@@ -1,0 +1,13 @@
+[Unit]
+Description=socat relay: WiFi 192.168.68.54:8006 -> Proxmox LAN 192.168.1.40:8006
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/socat TCP-LISTEN:8006,bind=192.168.68.54,fork,reuseaddr TCP:192.168.1.40:8006
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
